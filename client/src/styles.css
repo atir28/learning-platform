@@ -1,0 +1,123 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+/* Angular Material Overrides */
+.mat-mdc-toolbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mat-mdc-dialog-container {
+  border-radius: 8px;
+}
+
+/* Tailwind & Material Integration */
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-stroked-button {
+  text-transform: none !important;
+  font-weight: 500;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Dark mode scrollbar */
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* ── Angular Material Menu Overrides (CDK Overlay) ── */
+/* Menus are appended to body inside .cdk-overlay-container */
+.cdk-overlay-container .mat-mdc-menu-panel,
+.mat-mdc-menu-panel {
+  background-color: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.14), 0 8px 16px -4px rgba(0, 0, 0, 0.07) !important;
+  overflow: hidden !important;
+}
+
+.dark .cdk-overlay-container .mat-mdc-menu-panel,
+.dark .mat-mdc-menu-panel {
+  background-color: #111827 !important;
+  border: 1px solid #1f2937 !important;
+  box-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.4), 0 12px 20px -4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.cdk-overlay-container .mat-mdc-menu-content,
+.mat-mdc-menu-content {
+  background-color: inherit !important;
+  padding: 0 !important;
+}
+
+.cdk-overlay-container .mat-mdc-menu-item,
+.mat-mdc-menu-item {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
+
+.dark .cdk-overlay-container .mat-mdc-menu-item,
+.dark .mat-mdc-menu-item {
+  color: #f3f4f6 !important;
+}
+
+.cdk-overlay-container .mat-mdc-menu-item:hover:not([disabled]),
+.mat-mdc-menu-item:hover:not([disabled]) {
+  background-color: #f9fafb !important;
+}
+
+.dark .cdk-overlay-container .mat-mdc-menu-item:hover:not([disabled]),
+.dark .mat-mdc-menu-item:hover:not([disabled]) {
+  background-color: #1f2937 !important;
+}
+
+.dark .cdk-overlay-container .mat-mdc-menu-item .mat-icon,
+.dark .mat-mdc-menu-item .mat-icon {
+  color: #9ca3af !important;
+}
+
+/* Named panel class: notifications */
+.notifications-menu-class.mat-mdc-menu-panel {
+  min-width: 340px !important;
+}
+
+/* Named panel class: user profile */
+.user-menu-class.mat-mdc-menu-panel {
+  min-width: 320px !important;
+}
+
+/* Mat badge overflow fix */
+.mat-icon-button {
+  overflow: visible !important;
+}
